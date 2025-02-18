@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Stock Analysis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2 th:text="'Stock Analysis for ' + ${stock.companyName}"></h2>
+
+    <table class="table table-striped">
+        <tr><th>Metric</th><th>Value</th><th>Interpretation</th></tr>
+        <tr><td>P/E Ratio</td><td th:text="${stock.peRatio}"></td><td>Lower is better for value investing</td></tr>
+        <tr><td>Market Cap</td><td th:text="${stock.marketCap}"></td><td>Large caps are stable, small caps grow faster</td></tr>
+        <tr><td>ROE</td><td th:text="${stock.roe}"></td><td>Higher is better</td></tr>
+    </table>
+</div>
+</body>
+</html>
